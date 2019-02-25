@@ -1,0 +1,25 @@
+.form {
+  border-radius: 25px;
+  background-color: rgba( 0, 0, 0, .5);
+  color: #fff;
+  margin: auto;
+  width: 33%;
+  height: 100px;
+  margin: 200px auto;
+  padding: 10px;
+  border: 2px #FFDA56 solid;
+}
+
+.login-box {
+  display: flex;
+}
+
+.login-submit {
+  border-radius: 25px;
+  background-color: #FFDA56;
+}
+
+.login-submit:hover {
+  cursor: pointer;
+  background-color: #FFF200;
+}
