@@ -164,7 +164,7 @@ const timsQuestionDataset = {
     "solutions": [".includes()", ".instanceOf()", ".neverOf()", ".forEach()"],
     "correct_solution": ".includes()",
     "catagory": "prototypes",
-    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes",
     "id": 21
   },
   {
@@ -228,7 +228,7 @@ const timsQuestionDataset = {
     "solutions": ["true", "false", "neither"],
     "correct_solution": "false",
     "catagory": "prototypes",
-    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype"
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype",
     "id": 29
   },
   {
@@ -242,4 +242,4 @@ const timsQuestionDataset = {
   ]
 }
 
-module.exports = dataset
+module.exports = timsQuestionDataset

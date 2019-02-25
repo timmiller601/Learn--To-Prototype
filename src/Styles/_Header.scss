@@ -7,3 +7,18 @@
   // position: sticky;
   font: bold 36px/1 Helvetica, Verdana, sans-serif;
 }
+
+.reset-button {
+  margin-right: 0px;
+  margin-left: 10px;
+  color: #fff;
+  height: 3em;
+  width: 10em;
+  border-radius: 5px;
+  background-color: #233D77;
+}
+
+.reset-button:hover {
+  cursor: pointer;
+  background-color: #506FBA;
+}
