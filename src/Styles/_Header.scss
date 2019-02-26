@@ -1,41 +1,16 @@
-// .header {
-// 
-//   
-//   text-shadow: 1px 1px 2px #506FBA;
-//   
-//   font: bold 36px/1 Helvetica, Verdana, sans-serif;
-// }
-
-// .reset-button {
-//   margin-right: 0px;
-//   margin-left: 10px;
-//   color: #fff;
-//   height: 3em;
-//   width: 10em;
-//   border-radius: 5px;
-//   background-color: #233D77;
-// }
-
-// .reset-button:hover {
-//   cursor: pointer;
-//   background-color: #506FBA;
-// }
-
 header {
   color: #233D77;
-  background: $light;
+  background: $grey;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // text-shadow: 1px 1px 2px #506FBA;
-  min-height: 125px;
- 
+  min-height: 140px;
 
   h1 {
-    animation: color-change 1s infinite;
     padding-left: 50px;
     font-family: $title;
-    font-size: 50px;
+    font-size: 65px;
+    text-shadow: 1px 1px 2px $light;
   }
 
   select {

@@ -1,14 +1,17 @@
-// Colors
+// Colorsgrey
 $light: #FFEEB7;
 $blue: #233D77;
 $green: #38ef7d;
 
-$grey: linear-gradient(to top, #616161, #424141); 
-$grad: linear-gradient(to top, #233D77, #506FBA
-);
-$grad-grey: linear-gradient(to top, #404142, #939496
-);
+
+$grey: linear-gradient(0.25turn, #6f93bd, #9c9fa3, #6f93bd); 
+$blueish: linear-gradient(0.25turn, #6f93bd, #9c9fa3, #6f93bd);
+
+$grad: linear-gradient(to top, #233D77, #506FBA);
+
+$grad-grey: linear-gradient(to top, #57719b, #42649b);
 
 // Fonts
 $title: 'Fascinate';
 $text: 'Raleway';
+

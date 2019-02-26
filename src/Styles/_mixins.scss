@@ -1,10 +1,10 @@
 @mixin instructions-button {
     background: $grad-grey;
-    border: 1px solid $light;
+    box-shadow: 0px 0px 2px 1px $light;
     border-radius: 10px;
     padding: 5px;
     width: 250px;
-    margin: 15px 0;
+    margin: 5px 0;
     font-size: 20px;
     font-weight: 600;
     font-family: $text;
@@ -13,21 +13,20 @@
     &:hover {
         background: $grad;
         color: $light;
-        font-weight: 800;
         border: 1px solid $light;
         cursor: pointer;
     }
 }
 
 @mixin got-it-button {
-    font-family: $text;
-    border: 1px solid $light;    
+    // border: 1px solid $light;
+    box-shadow: 0px 0px 2px 1px $light;    
     border-radius: 10px;
-    color: $light;
-    background-color: $green;;
-    font-size: 14px;
-    cursor: pointer;
+    font-family: $text;
     width: 100px;
+    color: $light;
+    background-color: $green;
+    font-size: 14px;
       &:hover {
         background: $grad;
         color: $light;
@@ -38,25 +37,20 @@
 }
 
 @mixin card-button {
-    background-color: $grad-grey;
-    border-radius: 15px;
+    background: $grad-grey;
+    color: $light;
+    font-weight: 600;
+    // border: 1px solid $light;
+    box-shadow: 0px 0px 2px 1px $light;
+    border-radius: 10px;
     padding: 5px;
-    width: 140px;
+    width: 180px;
     margin: 15px 10px;
     font-size: 15px;
-
     &:hover {
         background: $grad;
-        animation: grow 1.2s linear infinite;
         color: $light;
-        font-weight: 800;
         border: 1px solid $light;
         cursor: pointer;
-    }
-
-    @keyframes grow {
-      50% {
-        transform: translateY(-5px)
-      }
     }
 }
