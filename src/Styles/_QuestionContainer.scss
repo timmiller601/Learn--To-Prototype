@@ -1,4 +1,4 @@
-.question-card {
+  .question-card {
   width: 500px;
   border-radius: 15px;
   box-shadow: 0px 0px 5px 1px $light;
@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #6f93bd;
+  background-color: rgba( 0, 0, 0, .2);
   color: $light;
 
   .catagory-title {
@@ -19,7 +19,7 @@
     text-align: center;
     font-family: $text;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 17px;
     padding: 10px;
   }
 

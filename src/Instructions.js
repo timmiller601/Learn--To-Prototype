@@ -10,7 +10,7 @@ class Instructions extends Component {
           <li>If you get the answer incorrect, it will be added to your Study List to continue practicing.</li>
           <li>If you want to view the questions you missed, choose Study List Only from the dropdown!</li>
         </div>
-        <button onClick={this.props.toggleInstructions}>Do the thing!</button>
+        <button onClick={this.props.toggleInstructions}>Now do the thing!</button>
       </div>
     )
   }

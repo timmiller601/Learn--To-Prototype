@@ -22,7 +22,7 @@ import './Styles/Master.scss';
     if (!this.state.showInstructions) {
       return (
         <header className="header">
-          <h1>Proto Quiz</h1>
+          <h1>Prototypes Quiz</h1>
           <Menu
             studyList={studyList}
             showAllQuestions={showAllQuestions}
