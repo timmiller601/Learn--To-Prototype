@@ -1,18 +1,25 @@
 .question-card {
   width: 500px;
   border-radius: 15px;
-  border: 2px solid $light;
+  box-shadow: 0px 0px 5px 1px $light;
   margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: grey;
-  color: $blue;
-  
+  background: #6f93bd;
+  color: $light;
+
+  .catagory-title {
+    color: $light;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px $blue;
+  }
+
   p {
     text-align: center;
     font-family: $text;
-    font-weight: 800;
+    font-weight: 600;
+    font-size: 20px;
     padding: 10px;
   }
 
@@ -21,6 +28,8 @@
   }
 }
 
-.answer-btns {
-  display: flex;
+  .answer-btns {
+    padding-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }

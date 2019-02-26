@@ -11,18 +11,17 @@ class QuestionContainer extends Component {
   render() {
     return (
       <div className='question-card' id={this.props.key}>
-        <h3>{this.props.catagory}</h3>
-        <p>{this.props.question}</p>
-        <ul>
+        <h3 className="catagory-title">Catagory: {this.props.catagory.toUpperCase()}</h3>
+        <p>Question: {this.props.question}</p>
+        <div className="answer-btns">
           {
             this.props.solutions.map((solution) => {
               return (
-                <li>{solution}</li>
+                <button className="guess-button"> {solution} </button>
               )
             })
           }
-        </ul>
-        <p> {this.props.link}</p>
+        </div>
       </div>
     )
   }
