@@ -3,20 +3,26 @@ import QuestionContainer from './QuestionContainer'
 
 
 class PlayingCard extends Component {
-    render() {
-    let { questions } = this.props.questions;
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    let { studyQuestions } = this.props;
+    console.log(studyQuestions);
     return (
-      <div className-="card-container">
-        {this.props.questions.map((element) => {
-          let { id, question, solutions, correct_solution, catagory, link } = element;
+      <div classname-="card-container">
+        {studyQuestions.map((element) => {
+          let { question, solutions, correct_solution, catagory, link, id } = element;
+
             return (
               <QuestionContainer
-                key={id}
                 question={question}
                 solutions={solutions}
                 correct_solution={correct_solution}
                 catagory={catagory}
                 link={link}
+                key={id}
               />
             )
       })}

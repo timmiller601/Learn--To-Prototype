@@ -4,6 +4,10 @@ import IncorrectAnswer from './IncorrectAnswer'
 
 
 class QuestionContainer extends Component {
+  constructor(props) {
+    super(props);
+    
+  }
   render() {
     return (
       <div className='question-card' id={this.props.key}>
@@ -11,7 +15,7 @@ class QuestionContainer extends Component {
         <p>{this.props.question}</p>
         <ul>
           {
-            this.props.solutions.split(' ').map((solution) => {
+            this.props.solutions.map((solution) => {
               return (
                 <li>{solution}</li>
               )

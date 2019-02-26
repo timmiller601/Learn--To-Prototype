@@ -9,7 +9,8 @@ export default class App extends Component {
     super();
 
     this.state = {
-      questions: []
+      loading: true, 
+      studyQuestions: []
     }
   }
   
@@ -18,7 +19,8 @@ export default class App extends Component {
       .then(results => results.json())
       .then((result) => {
         this.setState({
-          questions: result.TMQuestionDataset
+          loading: false,
+          studyQuestions: result.TMQuestionDataset.studyQuestions
         })
       })
       .catch(err => {
@@ -31,9 +33,10 @@ export default class App extends Component {
     return (
       <div className="App">
         <Header />
+        {!this.state.loading && 
         <PlayingCard
-         questions={this.state.questions}
-          />
+         studyQuestions={this.state.studyQuestions}
+          />}
         
       </div>
     );
