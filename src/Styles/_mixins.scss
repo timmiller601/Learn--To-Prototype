@@ -36,3 +36,27 @@
         cursor: pointer;
       }
 }
+
+@mixin card-button {
+    background-color: $grad-grey;
+    border-radius: 15px;
+    padding: 5px;
+    width: 140px;
+    margin: 15px 10px;
+    font-size: 15px;
+
+    &:hover {
+        background: $grad;
+        animation: grow 1.2s linear infinite;
+        color: $light;
+        font-weight: 800;
+        border: 1px solid $light;
+        cursor: pointer;
+    }
+
+    @keyframes grow {
+      50% {
+        transform: translateY(-5px)
+      }
+    }
+}
