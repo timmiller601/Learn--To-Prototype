@@ -10,7 +10,11 @@ export default class App extends Component {
 
     this.state = {
       loading: true, 
-      studyQuestions: []
+      studyQuestions: [],
+      studyList: [],
+      showAllQuestions: false,
+      guessedQuestions: [],
+      error: null
     }
   }
   
@@ -27,9 +31,70 @@ export default class App extends Component {
         this.setState({ error: err })
       })
     }
-  
+
+  populateStudyList = () => {
+    if (Object.keys(localStorage).length > 0) {
+      const savedStudyList = JSON.parse(localStorage.getItem('StudyList'))
+      this.setState({
+        studyList: savedStudyList
+      });
+    }
+  }
+
+  toggleAllQuestions = () => {
+    this.setState({
+      showAllQuestions: !this.state.showAllQuestions,
+    });
+  }
+
+  updateStudyList = (id, answer) => {
+    const questions = [...this.state.questions];
+    const studyList = [...this.state.studyList];
+    const guess = questions.find((question) => {
+      return question.id === id
+    })
+
+    if (!studyList.includes(guess.id) && answer === false) {
+      studyList.push(guess.id)
+    } else if (studyList.includes(guess.id) && !this.state.showAllQuestions) {
+      let index = studyList.indexOf(guess.id)
+      studyList.splice(index, 1)
+    }
+
+    this.setState({
+      studyList: studyList
+    }, () => {
+      localStorage.setItem('StudyList', JSON.stringify(studyList))
+      this.updateGuessedCards(id);
+    })
+  }  
+
+  updateGuessedCards = (id) => {
+    const questionsArr = [...this.state.questions];
+    const guessedArr = [...this.state.guessedQuestions];
+    const guessed = questionsArr.find((elem) => {
+      return elem.id === id
+    })
+    if (!guessedArr.includes(guessed.id)) {
+      guessedArr.push(guessed.id)
+    }
+    this.setState({
+      guessedQuestions: guessedArr
+    })
+  }
+
+  resetQuiz = () => {
+    this.setState({
+      studyList: [],
+      guessedQuestions: [],
+      showAllQuestions: false
+    });
+    localStorage.clear();
+  }
+
 
   render() {
+    console.log(this.state)
     return (
       <div className="App">
         <Header />

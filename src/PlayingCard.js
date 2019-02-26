@@ -9,7 +9,6 @@ class PlayingCard extends Component {
 
   render() {
     let { studyQuestions } = this.props;
-    console.log(studyQuestions);
     return (
       <div classname-="card-container">
         {studyQuestions.map((element) => {

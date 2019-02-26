@@ -18,13 +18,16 @@ import './Styles/Master.scss';
   }
 
   render() {
-    let { toggle } = this.props
+    let { toggle, resetQuiz, studyList, showAllQuestions } = this.props
     if (!this.state.showInstructions) {
       return (
         <header className="header">
           <h1>Proto Quiz</h1>
           <Menu
+            studyList={studyList}
+            showAllQuestions={showAllQuestions}
             toggleInstructionsShown={this.toggleInstructionsShown}
+            resetQuiz={resetQuiz}
             toggle={toggle}
           />
         </header>
