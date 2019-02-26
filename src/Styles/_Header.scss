@@ -1,24 +1,54 @@
-.header {
-  display: flex;
-  background-color: #FFEEB7;
+// .header {
+// 
+//   
+//   text-shadow: 1px 1px 2px #506FBA;
+//   
+//   font: bold 36px/1 Helvetica, Verdana, sans-serif;
+// }
+
+// .reset-button {
+//   margin-right: 0px;
+//   margin-left: 10px;
+//   color: #fff;
+//   height: 3em;
+//   width: 10em;
+//   border-radius: 5px;
+//   background-color: #233D77;
+// }
+
+// .reset-button:hover {
+//   cursor: pointer;
+//   background-color: #506FBA;
+// }
+
+header {
   color: #233D77;
-  text-shadow: 1px 1px 2px #506FBA;
-  height: 100px;
-  // position: sticky;
-  font: bold 36px/1 Helvetica, Verdana, sans-serif;
-}
+  background: $light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // text-shadow: 1px 1px 2px #506FBA;
+  min-height: 125px;
+ 
 
-.reset-button {
-  margin-right: 0px;
-  margin-left: 10px;
-  color: #fff;
-  height: 3em;
-  width: 10em;
-  border-radius: 5px;
-  background-color: #233D77;
-}
+  h1 {
+    animation: color-change 1s infinite;
+    padding-left: 50px;
+    font-family: $title;
+    font-size: 50px;
+  }
 
-.reset-button:hover {
-  cursor: pointer;
-  background-color: #506FBA;
+  select {
+    width: 248px;
+    height: 30px;
+    font-family: $text;
+    font-size: 15px;
+    outline: none;
+    text-align: center;
+    margin: 15px 0px 20px 0px;
+  }
+
+  button {
+    @include instructions-button
+  }
 }

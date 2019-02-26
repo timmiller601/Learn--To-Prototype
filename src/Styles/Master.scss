@@ -1,4 +1,7 @@
+@import "_mixins";
+@import "_variables";
+@import "App";
+@import "Header";
+@import "Login";
+@import "Instructions";
 @import url(https://fonts.googleapis.com/css?family=Arvo:700);
-@import 'App';
-@import 'Header';
-@import 'Login';
