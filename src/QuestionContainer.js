@@ -4,9 +4,14 @@ import IncorrectAnswer from './IncorrectAnswer'
 
 
 class QuestionContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-}
+  constructor() {
 
+  }
+  render() {
+    return (
+       <p>Hi</p> 
+      )
+    }
+}
+    
 export default QuestionContainer;
