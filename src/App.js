@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
 import PlayingCard from './PlayingCard.js';
-// import { timsQuestionDataset } from './data';
+
 
 
 export default class App extends Component {
@@ -9,7 +9,7 @@ export default class App extends Component {
     super();
 
     this.state = {
-      loading: true, 
+      loading: true,
       studyQuestions: [],
       studyList: [],
       showAllQuestions: false,
@@ -32,14 +32,14 @@ export default class App extends Component {
       })
     }
 
-  populateStudyList = () => {
-    if (Object.keys(localStorage).length > 0) {
-      const savedStudyList = JSON.parse(localStorage.getItem('StudyList'))
-      this.setState({
-        studyList: savedStudyList
-      });
-    }
-  }
+  // populateStudyList = () => {
+  //   if (Object.keys(localStorage).length > 0) {
+  //     const savedStudyList = JSON.parse(localStorage.getItem('StudyList'))
+  //     this.setState({
+  //       studyList: savedStudyList
+  //     });
+  //   }
+  // }
 
   toggleAllQuestions = () => {
     this.setState({
@@ -94,16 +94,26 @@ export default class App extends Component {
 
 
   render() {
-    return (
-      <div className="App">
-        <Header />
-        {!this.state.loading && 
-        <PlayingCard
-         studyQuestions={this.state.studyQuestions}
-          />}
-        
-      </div>
-    );
+    let {error} = this.state
+      return (
+        <div className="App">
+          <Header 
+            toggle={this.toggleAllQuestions}
+            resetQuiz={this.resetQuiz}
+            studyList={this.state.studyList}
+            showAllQuestions={this.state.showAllQuestions}
+          /> 
+          {!this.state.loading && 
+          <PlayingCard
+            studyQuestions={this.state.studyQuestions}
+            updateStudyList={this.updateStudyList}
+            studyList={this.state.studyList}
+            showAllQuestions={this.state.showAllQuestions}
+            updateGuessedCards={this.updateGuessedCards}
+            guessedQuestions={this.state.guessedQuestions}
+            />}
+        </div>
+      );
   }
 }
 

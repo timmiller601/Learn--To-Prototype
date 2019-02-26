@@ -1,5 +1,5 @@
 .instructions {
-  background: #6f93bd;
+  background-color: rgba( 0, 0, 0, .3);
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   margin-bottom: 10px;
   margin-top: 20px;
   box-shadow: 0px 0px 5px 1px $light;
-  border-radius: 5px;
+  border-radius: 15px;
   }
   
   h3 {

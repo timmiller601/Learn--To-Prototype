@@ -35,7 +35,7 @@ import './Styles/Master.scss';
       } else {
         return (
           <header className="header">
-            <h1>Proto Quiz</h1>
+            <h1>Read the Instructions</h1>
               <Instructions 
                 toggleInstructions={this.toggleInstructionsShown}
               />
