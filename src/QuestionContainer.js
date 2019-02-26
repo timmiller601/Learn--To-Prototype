@@ -22,6 +22,7 @@ class QuestionContainer extends Component {
             })
           }
         </ul>
+        <p> {this.props.link}</p>
       </div>
     )
   }
