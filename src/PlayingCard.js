@@ -1,15 +1,33 @@
 import React, { Component } from 'react'
 import QuestionContainer from './QuestionContainer'
-import './styles/Master.scss'
+
 
 class PlayingCard extends Component {
-    render() {
-      return (
-        <div className="card-container">
-                <QuestionCard
-                />
-        </div>
-      )
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    let { studyQuestions } = this.props;
+    console.log(studyQuestions);
+    return (
+      <div classname-="card-container">
+        {studyQuestions.map((element) => {
+          let { question, solutions, correct_solution, catagory, link, id } = element;
+
+            return (
+              <QuestionContainer
+                question={question}
+                solutions={solutions}
+                correct_solution={correct_solution}
+                catagory={catagory}
+                link={link}
+                key={id}
+              />
+            )
+      })}
+      </div>
+    )
     }
   }
 
