@@ -1,0 +1,12 @@
+.play-container {
+  display: flex;
+  flex-direction: column;
+  background: $blue;
+  align-items: center;
+  justify-content: center;
+  min-height: 750px;
+}
+
+button {
+  outline: none;
+}
